@@ -1,220 +1,306 @@
-
 body {
+    /* Sets the font for the body. If 'Roboto' is unavailable, it will fall back to Arial, then sans-serif */
     font-family: 'Roboto', Arial, sans-serif;
+    /* Applies a background gradient transitioning from light blue to white */
     background: linear-gradient(135deg, #e0e7ff, #f0f4f8);
+    /* Removes default margin and padding from the body */
     margin: 0;
     padding: 0;
+    /* Uses Flexbox to center the container both horizontally and vertically */
     display: flex;
     justify-content: center;
     align-items: center;
+    /* Sets the height to take up the full viewport height */
     height: 100vh;
 }
 
 .container {
+    /* Sets the background color to white */
     background-color: #ffffff;
+    /* Adds padding inside the container */
     padding: 20px;
+    /* Rounds the corners of the container */
     border-radius: 20px;
+    /* Adds a shadow to create a floating effect */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Sets a fixed width for the container */
     width: 400px;
+    /* Smoothly transitions the container's transform properties over 0.3 seconds */
     transition: transform 0.3s;
+    /* Ensures the container does not exceed the screen width */
     max-width: 100%;
 }
 
 .container:hover {
+    /* Enlarges the container by 5% when hovered over */
     transform: scale(1.05);
 }
 
 h1 {
+    /* Centers the text inside the heading */
     text-align: center;
+    /* Sets the color of the heading to teal */
     color: #00796b;
+    /* Adds space below the heading */
     margin-bottom: 20px;
 }
 
 .info-bar {
+    /* Flexbox layout to space items horizontally */
     display: flex;
+    /* Distributes space between the items */
     justify-content: space-between;
+    /* Aligns items vertically in the center */
     align-items: center;
+    /* Adds space below the info-bar */
     margin-bottom: 10px;
+    /* Sets the color of the text inside the info-bar */
     color: #00796b;
+    /* Sets the font size for the info-bar text */
     font-size: 14px;
 }
 
 .info-actions i {
+    /* Adds space to the left of the icon */
     margin-left: 10px;
+    /* Changes the cursor to a pointer to indicate it's clickable */
     cursor: pointer;
+    /* Sets the color of the icon */
     color: #00796b;
+    /* Adds a smooth color transition over 0.3 seconds */
     transition: color 0.3s;
 }
 
 .info-actions i:hover {
+    /* Changes the color of the icon to a darker shade of teal when hovered over */
     color: #004d40;
 }
 
 .search-bar {
+    /* Sets the width to 90% of its parent container */
     width: 90%;
+    /* Flexbox layout to align the input and icon horizontally */
     display: flex;
     align-items: center;
+    /* Adds a border with teal color */
     border: 1px solid #00796b;
+    /* Rounds the corners of the search bar */
     border-radius: 20px;
+    /* Adds padding inside the search bar */
     padding: 10px;
+    /* Adds space below the search bar */
     margin-bottom: 20px;
+    /* Adds an inset shadow to give a slight sunken effect */
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Adds a smooth transition for the box-shadow property */
     transition: box-shadow 0.3s;
 }
 
 .search-bar input {
+    /* Removes the border around the input */
     border: none;
+    /* Removes the default blue outline on focus */
     outline: none;
+    /* Makes the input take up available space */
     flex: 1;
+    /* Adds padding inside the input for better readability */
     padding: 5px;
+    /* Sets the text color */
     color: #333;
+    /* Sets the font size of the text */
     font-size: 14px;
 }
 
 .search-bar i {
+    /* Sets the color of the search icon */
     color: #00796b;
+    /* Adds space to the left of the search icon */
     margin-left: 10px;
 }
 
 .contact-list {
+    /* Flexbox layout to stack contact items vertically */
     display: flex;
     flex-direction: column;
 }
 
 .contact {
+    /* Flexbox layout to align contact items horizontally */
     display: flex;
     align-items: center;
+    /* Adds padding inside each contact item */
     padding: 10px;
+    /* Adds a border below each contact item */
     border-bottom: 1px solid #00796b;
+    /* Adds a smooth transition for the background-color */
     transition: background-color 0.3s;
 }
 
 .contact:last-child {
+    /* Removes the border-bottom for the last contact item */
     border-bottom: none;
 }
 
 .contact:hover {
+    /* Changes the background color when the contact is hovered */
     background-color: #e0f7fa;
 }
 
 .contact-img {
+    /* Makes the contact image circular */
     border-radius: 50%;
+    /* Sets the width and height of the contact image */
     width: 50px;
     height: 50px;
+    /* Adds space to the right of the contact image */
     margin-right: 10px;
 }
 
 .contact-info {
+    /* Makes the contact info section take up the available space */
     flex: 1;
 }
 
 .contact-info h2 {
+    /* Removes the margin around the contact name */
     margin: 0;
+    /* Sets the font size for the contact name */
     font-size: 1.2em;
+    /* Sets the color of the contact name to teal */
     color: #00796b;
+    /* Adds a smooth transition for the color */
     transition: color 0.3s;
 }
 
 .contact-info h2:hover {
+    /* Changes the color of the contact name when hovered */
     color: #004d40;
 }
 
 .contact-actions {
+    /* Flexbox layout to align action icons horizontally */
     display: flex;
     align-items: center;
 }
 
 .contact-actions i {
+    /* Adds space to the left of the action icons */
     margin-left: 10px;
+    /* Changes the cursor to a pointer to indicate it's clickable */
     cursor: pointer;
+    /* Sets the color of the action icons */
     color: #00796b;
+    /* Adds a smooth color transition over 0.3 seconds */
     transition: color 0.3s;
 }
 
 .contact-actions i:hover {
+    /* Changes the color of the action icon to a darker teal when hovered */
     color: #004d40;
-    transform: scale(1.2); 
+    /* Slightly enlarges the icon when hovered over */
+    transform: scale(1.2);
 }
 
 .popup {
+    /* Initially hides the popup */
     display: none;
+    /* Fixes the popup position to the screen */
     position: fixed;
+    /* Positions the popup to cover the entire screen */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+    /* Adds a semi-transparent black background to the popup */
     background-color: rgba(0, 0, 0, 0.5);
+    /* Centers the popup content */
     justify-content: center;
     align-items: center;
 }
 
 .popup-content {
+    /* Sets the background color of the popup content to white */
     background-color: #fff;
+    /* Adds padding inside the popup content */
     padding: 20px;
+    /* Rounds the corners of the popup content */
     border-radius: 10px;
+    /* Adds a shadow for a floating effect */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Sets a fixed width for the popup content */
     width: 300px;
 }
 
 .popup-content h2 {
+    /* Adds space below the heading */
     margin: 0 0 20px;
+    /* Sets the color of the heading */
     color: #00796b;
+    /* Centers the heading text */
     text-align: center;
 }
 
 .popup-content form {
+    /* Flexbox layout to stack form elements vertically */
     display: flex;
     flex-direction: column;
 }
 
 .popup-content label {
+    /* Adds space below the label */
     margin-bottom: 5px;
+    /* Sets the color of the label */
     color: #333;
 }
 
 .popup-content input {
+    /* Adds space below the input */
     margin-bottom: 15px;
+    /* Adds padding inside the input field */
     padding: 10px;
+    /* Adds a border with teal color to the input */
     border: 1px solid #00796b;
+    /* Rounds the corners of the input field */
     border-radius: 5px;
 }
 
 .popup-content button {
+    /* Adds padding inside the button */
     padding: 10px;
+    /* Sets the background color of the button to teal */
     background-color: #00796b;
+    /* Sets the text color of the button to white */
     color: #fff;
+    /* Removes the border */
     border: none;
+    /* Rounds the corners of the button */
     border-radius: 5px;
+    /* Changes the cursor to a pointer to indicate the button is clickable */
     cursor: pointer;
+    /* Adds a smooth transition for the background-color */
     transition: background-color 0.3s;
 }
 
 .popup-content button:hover {
+    /* Darkens the button's background color when hovered */
     background-color: #004d40;
 }
 
 .close {
+    /* Positions the close button absolutely inside the popup */
     position: absolute;
+    /* Positions the close button in the top-right corner */
     top: 10px;
     right: 10px;
+    /* Changes the cursor to a pointer */
     cursor: pointer;
+    /* Sets the font size of the close button */
     font-size: 20px;
+    /* Sets the color of the close button to teal */
     color: #00796b;
 }
 
 .close:hover {
-    color: #004d40;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    color: #00796b;
-}
-
-.close:hover {
+    /* Changes the color of the close button to a darker teal when hovered */
     color: #004d40;
 }
